@@ -44,6 +44,7 @@ public class MemoList {
         sb.append("4.삭제");
         sb.append("5.종료");
         sb.append("원하는 메뉴의 숫자를 입력하세요_>");
+        sb.append("123");
         System.out.println(sb.toString());
 
     }
