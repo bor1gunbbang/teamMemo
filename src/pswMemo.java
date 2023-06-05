@@ -1,3 +1,5 @@
+package teamMemo.src;
+
 public class pswMemo extends MemoVo{
     String psw;
 

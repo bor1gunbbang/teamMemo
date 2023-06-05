@@ -1,3 +1,5 @@
+package teamMemo.src;
+
 public class MemoVo {
     int postNumber;
     String name;
