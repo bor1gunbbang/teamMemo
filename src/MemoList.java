@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MemoList {
+    private List<pswMemo> writeMemo = new ArrayList<>();
     Scanner scan = new Scanner(System.in);
     int postNumber = 0;
 
