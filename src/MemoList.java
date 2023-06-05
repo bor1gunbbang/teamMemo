@@ -12,6 +12,15 @@ public class MemoList {
     //입력
     //조회
     // 여기가 내가 할곳
+public void dataMemoList(){
+    System.out.println(writeMemo);
+    for (int i = writeMemo.size(); i > 0; i--) {
+        System.out.println(writeMemo.get(i-1)."get번호()" + ". " + writeMemo.get(i-1)."get메모장이름"()
+                + " | " +writeMemo.get(i-1)."get메모장내용"() + " | " + writeMemo.get(i-1)."get날짜"() );
+    }
+    choiceNumber();
+}
+
     //수정
     //삭제
     //종료
