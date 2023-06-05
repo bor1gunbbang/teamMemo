@@ -1,3 +1,5 @@
+package teamMemo.src;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -9,6 +11,7 @@ public class MemoList {
 
     //입력
     //조회
+    // 여기가 내가 할곳
     //수정
     //삭제
     //종료
