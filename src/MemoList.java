@@ -11,6 +11,20 @@ public class MemoList {
 
     //입력
     //조회
+     public void showMemoList() {
+        System.out.println(writeMemo);
+
+        int index = writeMemo.size();
+        for (int i = writeMemo.size() - 1; i >= 0; i--) {
+            pswMemo memo = writeMemo.get(i);
+            System.out.println(memo.getPostNumber() + ". " + memo.getName() + " | " +
+                    memo.getMemoField() + " | " + memo.getTime());
+            index--;
+        }
+
+        choiceNumber();
+
+    }
     //수정
     //삭제
     //종료
@@ -33,20 +47,7 @@ public class MemoList {
         }
     }
 
-    public void showMemoList() {
-        System.out.println(writeMemo);
-
-        int index = writeMemo.size();
-        for (int i = writeMemo.size() - 1; i >= 0; i--) {
-            pswMemo memo = writeMemo.get(i);
-            System.out.println(memo.getPostNumber() + ". " + memo.getName() + " | " +
-                    memo.getMemoField() + " | " + memo.getTime());
-            index--;
-        }
-
-        choiceNumber();
-
-    }
+   
 
 
 
