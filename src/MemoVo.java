@@ -1,4 +1,4 @@
-import java.awt.color.ICC_ColorSpace;
+
 
 public class MemoVo {
     int postNumber;

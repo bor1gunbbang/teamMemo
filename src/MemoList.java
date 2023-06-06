@@ -1,5 +1,4 @@
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -11,6 +10,20 @@ public class MemoList {
 
     //입력
     //조회
+     public void showMemoList() {
+        System.out.println(writeMemo);
+
+        int index = writeMemo.size();
+        for (int i = writeMemo.size() - 1; i >= 0; i--) {
+            pswMemo memo = writeMemo.get(i);
+            System.out.println(memo.getPostNumber() + ". " + memo.getName() + " | " +
+                    memo.getMemoField() + " | " + memo.getTime());
+            index--;
+        }
+
+        choiceNumber();
+
+    }
     //수정
     //삭제
     //종료
@@ -22,6 +35,7 @@ public class MemoList {
             case 1:
                     //입력
             case 2:
+                showMemoList();
                     //조회
             case 3:
                     //수정
@@ -32,7 +46,7 @@ public class MemoList {
         }
     }
 
-
+   
 
 
 
