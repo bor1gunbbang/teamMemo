@@ -1,4 +1,4 @@
-package teamMemo.src;
+
 
 public class MemoVo {
     int postNumber;
@@ -11,5 +11,30 @@ public class MemoVo {
         this.name = name;
         this.memoField = memoField;
         this.time = time;
+    }
+
+    public int getPostNumber() {
+        return postNumber;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getMemoField() {
+        return memoField;
+    }
+
+    public void setMemoField(String memoField) {
+        this.memoField = memoField;
     }
 }

@@ -1,4 +1,3 @@
-package teamMemo.src;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +50,33 @@ public class MemoList {
 
 
 
+public void editor(){
+    LocalDateTime lt = LocalDateTime.now();
+    String time = lt.format(DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 HH:mm:ss"));
+    //조회 메서드
+    System.out.println("변경할 메모의 번호를 선택하세요 \n_>");
+        int choicnumber = scan.nextInt();
+    System.out.println(writeMemo.get(choicnumber - 1).getPostNumber() +
+            "번 메모를 수정하시겠습니까? 작성자 : " + writeMemo.get(choicnumber - 1).getName() +
+            "\n y/n_>");
+        String yorno = scan.nextLine();
+        if (yorno.equals("y")){
+            System.out.println("암호를 입력하세요");
+            String  psm = scan.nextLine();
+            if (writeMemo.get(choicnumber-1).getPsw().equals(psm)) {
+                System.out.println("수정할 메모를 입력하세요 \n_>");
+                String editmemo = scan.nextLine();
+                writeMemo.get(choicnumber-1).setMemoField(editmemo);
+                writeMemo.get(choicnumber-1).setTime(time);
+                System.out.println("메모가 수정되었습니다. :" +
+                        writeMemo.get(choicnumber-1).getTime() + "에 수정되었습니다.");
+            }
+        }else if (yorno.equals("n")){
+            // 처음화면메서드
+        }
 
+
+}
 
 
     public void screen(){
@@ -64,6 +89,7 @@ public class MemoList {
         sb.append("4.삭제");
         sb.append("5.종료");
         sb.append("원하는 메뉴의 숫자를 입력하세요_>");
+        sb.append("123");
         System.out.println(sb.toString());
 
     }
